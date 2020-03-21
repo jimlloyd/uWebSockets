@@ -7,13 +7,13 @@ add_executable(EchoServer EchoServer.cpp)
 target_link_libraries(EchoServer uWebSockets)
 
 add_executable(EchoServerThreaded EchoServerThreaded.cpp)
-target_link_libraries(EchoServerThreaded uWebSockets)
+target_link_libraries(EchoServerThreaded uWebSockets pthread)
 
 add_executable(HelloWorld HelloWorld.cpp)
 target_link_libraries(HelloWorld uWebSockets)
 
 add_executable(HelloWorldThreaded HelloWorldThreaded.cpp)
-target_link_libraries(HelloWorldThreaded uWebSockets)
+target_link_libraries(HelloWorldThreaded uWebSockets pthread)
 
 # Disabled because <filesystem> is not available with Apple clang 10 and I am too lazy to figure out a workaround
 # https://stackoverflow.com/questions/42633477/macos-clang-c17-filesystem-header-not-found
